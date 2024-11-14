@@ -22,7 +22,7 @@ class TasksAddTaskController
     }
 
 
-    public function __invoke ($request, $response, $args)
+    public function __invoke($request, $response, $args)
     {
 
         $data = $request->getParsedBody();

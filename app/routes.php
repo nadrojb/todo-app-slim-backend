@@ -12,4 +12,7 @@ return function (App $app) {
     $app->get('/tasks', \App\Controllers\TasksController::class);
 
     $app->post('/tasks', \App\Controllers\TasksAddTaskController::class);
+
+    $app->post('/deletetask/{id}', \App\Controllers\TasksDeleteController::class);
+
 };

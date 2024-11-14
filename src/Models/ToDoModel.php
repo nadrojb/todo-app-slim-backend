@@ -30,4 +30,10 @@ class ToDoModel
             'priority_id' => $task['priority_id'],
         ]);
     }
+
+    public function deleteTask(int $taskId)
+    {
+        $query = $this->db->prepare('DELETE FROM tasks WHERE id = :id');
+        $query->execute(['id' => $taskId]);
+    }
 }
