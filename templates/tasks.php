@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Todo List</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-sans w-full">
-
-  <div class="bg-white shadow-lg rounded-lg w-96 p-6 mx-auto">
-    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Todo List</h1>
-
-    <div class="flex space-x-2 mb-6">
-      <input type="text" placeholder="Enter new task" class="flex-1 p-2 border border-gray-300 rounded-md" />
-      <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add</button>
+<form action="" method="post">
+    <div>
+        <input type="text" name="title" placeholder="Enter Task Title">
     </div>
+    <select name="priority_id" id="priority">
+        <option value="1">Low</option>
+        <option value="2">Medium</option>
+        <option value="3">High</option>
+    </select>
+    <div>
+        <button type="submit">Add Task</button>
+    </div>
+</form>
 
+<div class="bg-white shadow-lg rounded-lg w-96 p-6 mx-auto">
     <ul class="space-y-4">
         <?php
         echo \App\ViewHelpers\ToDoViewHelper::displayAllTasks($tasks);
         ?>
     </ul>
-  </div>
+</div>
 
 </body>
 </html>
