@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Todo List</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer ></script>
+   <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gray-100 font-sans w-full">
-<form action="" method="post">
+<body class="bg-indigo-500 font-sans w-full ">
+<section>
+    <h1 class="pt-4 pl-4 pr-4 font-medium text-3xl text-white"><i class="fa-regular fa-clipboard fa-xs pr-2" style="color: #ffffff;"></i>Task List</h1>
+</section>
+<form id="create-task-form" action="" method="post" class="hidden">
     <div>
         <input type="text" name="title" placeholder="Enter Task Title">
     </div>
@@ -18,16 +22,19 @@
         <option value="3">High</option>
     </select>
     <div>
-        <button type="submit">Add Task</button>
+        <button type="submit" id="create-task-button">Add task</button>
     </div>
 </form>
 
-<div class="bg-white shadow-lg rounded-lg w-96 p-6 mx-auto">
+<div class="bg-indigo-500 w-full p-4 mx-auto">
     <ul class="space-y-4">
         <?php
         echo \App\ViewHelpers\ToDoViewHelper::displayAllTasks($tasks);
         ?>
     </ul>
+</div>
+<div class="p-4 absolute bottom-1 w-full">
+    <button id="add-task-button" class="p-4 rounded-lg text-white bg-indigo-600 w-full text-left active:bg-indigo-500"><i class="fa-solid fa-plus fa-sm mr-2" style="color: #ffffff;"></i>Add task</button>
 </div>
 
 
