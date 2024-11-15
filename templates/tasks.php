@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-indigo-500 font-sans w-full ">
-<section>
+<section class="w-full mx-auto max-w-3xl">
     <h1 class="pt-4 pl-4 pr-4 font-medium text-3xl text-white"><i class="fa-regular fa-clipboard fa-xs pr-2" style="color: #ffffff;"></i>Task List</h1>
 </section>
 <form id="create-task-form" action="" method="post" class="hidden">
@@ -26,15 +26,15 @@
     </div>
 </form>
 
-<div class="bg-indigo-500 w-full p-4 mx-auto">
+<div class="bg-indigo-500 w-full p-4 mx-auto max-w-3xl">
     <ul class="space-y-4">
         <?php
         echo \App\ViewHelpers\ToDoViewHelper::displayAllTasks($tasks);
         ?>
     </ul>
 </div>
-<div class="p-4 absolute bottom-1 w-full">
-    <button id="add-task-button" class="p-4 rounded-lg text-white bg-indigo-600 w-full text-left active:bg-indigo-500"><i class="fa-solid fa-plus fa-sm mr-2" style="color: #ffffff;"></i>Add task</button>
+<div class="p-4 absolute bottom-1 right-1/2 w-full max-w-3xl translate-x-1/2">
+    <button id="add-task-button" class="p-4 rounded-lg text-white bg-indigo-600 w-full text-left font-medium active:bg-white active:text-indigo-600 active:ease-in">&#x2b; Add task</button>
 </div>
 
 
