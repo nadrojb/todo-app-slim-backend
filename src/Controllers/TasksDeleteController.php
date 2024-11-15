@@ -19,10 +19,7 @@ class TasksDeleteController
 
         $this->model->deleteTask($taskId);
 
-
         return $response->withHeader('Location', '/tasks')->withStatus(301);
-
-
     }
 
 }

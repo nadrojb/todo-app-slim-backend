@@ -24,14 +24,9 @@ class TasksAddTaskController
 
     public function __invoke($request, $response, $args)
     {
-
         $data = $request->getParsedBody();
         // future self, put some validation here
         $this->model->addTasks($data);
-        $tasks = $this->model->getTasks();
-        $parameters = ['tasks' => $tasks];
-
-        return $this->view->render($response, "tasks.php", $parameters);
+        return $response->withHeader('Location', '/tasks')->withStatus(301);
     }
-
 }

@@ -11,7 +11,7 @@ class ToDoViewHelper
 
         foreach ($tasks as $task) {
 
-            $taskDetail .= ' <li class="flex justify-between items-center bg-gray-50 p-4 rounded-lg shadow-sm">';
+            $taskDetail .= ' <li class="flex justify-between items-center bg-gray-50 p-4 rounded-lg">';
             $taskDetail .= '<span>' . $task['title'] . '</span>';
             $taskDetail .= '<span>' . $task['datetime'] . '</span>';
             $taskDetail .= '<form action="/deletetask/' . $task['id'] .'" method="POST" >
