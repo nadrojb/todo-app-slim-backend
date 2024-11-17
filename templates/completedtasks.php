@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-indigo-500 font-sans w-full ">
-<section class="w-full mx-auto max-w-3xl">
-    <h1 class="pt-4 pl-4 pr-4 font-medium text-3xl text-white"><i class="fa-regular fa-clipboard fa-xs pr-2" style="color: #ffffff;"></i>Completed Tasks</h1>
+<section class="w-full mx-auto max-w-3xl flex justify-between items-center pt-4 pr-4">
+    <h1 class="pl-4 pr-4 font-medium text-3xl text-white">
+        <i class="fa-regular fa-clipboard fa-xs pr-2" style="color: #ffffff;"></i>Completed Tasks
+    </h1>
+    <div>
+        <a href="/tasks" class="text-white font-medium"><<< Back to task list</a>
+    </div>
 </section>
-<div>
-    <a href="/tasks"><button><<< back to task list</button></a>
-</div>
 <form id="create-task-form" action="" method="post" class="hidden">
     <div>
         <input type="text" name="title" placeholder="Enter Task Title">
@@ -36,11 +38,6 @@
         ?>
     </ul>
 </div>
-<div class="p-4 absolute bottom-1 right-1/2 w-full max-w-3xl translate-x-1/2">
-    <button id="add-task-button" class="p-4 rounded-lg text-white bg-indigo-600 w-full text-left font-medium active:bg-white active:text-indigo-600 active:ease-in">&#x2b; Add task</button>
-</div>
-
 
 </body>
 </html>
-
