@@ -8,7 +8,6 @@ use Slim\Views\PhpRenderer;
 class GetCompletedTasksController
 {
     private $model;
-
     private $view;
 
     public function __construct(ToDoModel $model, PhpRenderer $view)

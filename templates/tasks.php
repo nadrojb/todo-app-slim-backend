@@ -56,7 +56,5 @@
         &#x2b; Add task
     </button>
 </div>
-
-
 </body>
 </html>

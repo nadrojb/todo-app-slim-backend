@@ -8,13 +8,9 @@ use Slim\Views\PhpRenderer;
 class CompleteTasksController
 {
     private  $model;
-
-
     public function __construct(ToDoModel $model)
     {
         $this->model = $model;
-
-
     }
     public function __invoke($request, $response, $args)
     {
