@@ -6,19 +6,17 @@ use App\Models\ToDoModel;
 use Slim\Views\PhpRenderer;
 
 
-class TasksAddTaskController
+class AddTasksController
 {
     private $model;
 
-    private $view;
+
 
 
     //type hinting. when this controller is made then the dependency injector will see the tpe hint, it goes oh the controller needs a ToDoModel then will go find it.
     public function __construct(ToDoModel $model, PhpRenderer $view)
     {
         $this->model = $model;
-        $this->view = $view;
-
     }
 
 

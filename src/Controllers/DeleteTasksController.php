@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ToDoModel;
 
-class TasksDeleteController
+class DeleteTasksController
 {
     private $model;
 
@@ -19,7 +19,7 @@ class TasksDeleteController
 
         $this->model->deleteTask($taskId);
 
-        return $response->withHeader('Location', '/tasks')->withStatus(301);
+        return $response->withHeader('Location', '/completed')->withStatus(301);
     }
 
 }

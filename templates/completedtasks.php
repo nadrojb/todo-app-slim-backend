@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Todo List</title>
     <script src="script.js" defer ></script>
-   <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-indigo-500 font-sans w-full ">
 <section class="w-full mx-auto max-w-3xl">
-    <h1 class="pt-4 pl-4 pr-4 font-medium text-3xl text-white"><i class="fa-regular fa-clipboard fa-xs pr-2" style="color: #ffffff;"></i>Task List</h1>
+    <h1 class="pt-4 pl-4 pr-4 font-medium text-3xl text-white"><i class="fa-regular fa-clipboard fa-xs pr-2" style="color: #ffffff;"></i>Completed Tasks</h1>
 </section>
 <div>
-    <a href="/completed"><button>View completed tasks >>></button></a>
+    <a href="/tasks"><button><<< back to task list</button></a>
 </div>
 <form id="create-task-form" action="" method="post" class="hidden">
     <div>
@@ -32,7 +32,7 @@
 <div class="bg-indigo-500 w-full p-4 mx-auto max-w-3xl">
     <ul class="space-y-4">
         <?php
-        echo \App\ViewHelpers\ToDoViewHelper::displayAllTasks($tasks);
+        echo \App\ViewHelpers\ToDoViewHelper::displayCompletedTasks($tasks);
         ?>
     </ul>
 </div>
@@ -43,3 +43,4 @@
 
 </body>
 </html>
+

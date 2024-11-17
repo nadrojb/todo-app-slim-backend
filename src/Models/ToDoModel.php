@@ -16,7 +16,7 @@ class ToDoModel
 
     public function getTasks()
     {
-        $query = $this->db->prepare('SELECT `id`, `title`, `priority_id` FROM `tasks`');
+        $query = $this->db->prepare('SELECT `id`, `title`, `priority_id`, `completed` FROM `tasks` WHERE `completed` = 0');
         $query->execute();
         return $query->fetchAll();
     }
@@ -30,10 +30,22 @@ class ToDoModel
             'priority_id' => $task['priority_id'],
         ]);
     }
-
     public function deleteTask(int $taskId)
     {
-        $query = $this->db->prepare('DELETE FROM tasks WHERE id = :id');
+        $query = $this->db->prepare('DELETE FROM `tasks` WHERE id = :id');
         $query->execute(['id' => $taskId]);
+    }
+
+    public function completeTask(int $taskId)
+    {
+        $query = $this->db->prepare('UPDATE `tasks` SET `completed` = 1 WHERE `id` = :id');
+        $query->execute(['id' => $taskId]);
+    }
+
+    public function getCompletedTasks()
+    {
+        $query = $this->db->prepare('SELECT `id`, `title`, `priority_id` FROM `tasks` WHERE `completed` = 1');
+        $query->execute();
+        return $query->fetchAll();
     }
 }
