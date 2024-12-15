@@ -14,5 +14,4 @@ return function (App $app) {
     $app->get('/completed', \App\Controllers\GetCompletedTasksController::class);
     $app->post('/completed/{id}', \App\Controllers\CompleteTasksController::class);
     $app->post('/deleted/{id}', \App\Controllers\DeleteTasksController::class);
-    $app->get('/api/tasks', \App\Controllers\ApiTasksController::class);
 };

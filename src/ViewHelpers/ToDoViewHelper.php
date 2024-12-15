@@ -5,7 +5,7 @@ namespace App\ViewHelpers;
 class ToDoViewHelper
 {
 
-    public static function displayAllTasks($tasks)
+    public static function displayAllTasks($tasks): string
     {
         $taskDetail = "";
 
@@ -21,7 +21,7 @@ class ToDoViewHelper
         return $taskDetail;
     }
 
-    public static function displayCompletedTasks($tasks)
+    public static function displayCompletedTasks($tasks): string
     {
         $taskDetail = "";
 
